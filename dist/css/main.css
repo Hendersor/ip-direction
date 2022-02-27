@@ -1,0 +1,8 @@
+@use "/src/scss/global.scss";
+.data {
+  border: 1px solid red;
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=main.css.map */

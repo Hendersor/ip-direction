@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ip Address Tracker</title>
+  </head>
+  <body>
+    <main>
+      <section class="dataContainer">
+        <div class="data">
+          <h1>IP Address Tracker</h1>
+          <div class="inputContainer">
+            <input
+              type="text"
+              minlength="7"
+              maxlength="15"
+              size="15"
+              pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"
+              id="ipAddress"
+            />
+            <figure>
+              <img
+                src="https://res.cloudinary.com/dwdz4mn27/image/upload/v1645993311/ip-address-tracker-master/images/icon-arrow_w3vais.svg"
+                alt="arrow icon"
+              />
+            </figure>
+          </div>
+
+          <div class="information">
+            <p>IP ADDRESS <span>192.212.174.101</span></p>
+            <p>LOCATION <span>Brooklyn, NY 10001</span></p>
+            <p>TIMEZONE <span>UTC -05:00</span></p>
+            <p>ISP <span>SpaceX Starlink</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="map"></section>
+    </main>
+    <script src="/src/index.js"></script>
+  </body>
+</html>

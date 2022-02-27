@@ -1,0 +1,119 @@
+$black: hsl(0, 0%, 17%);
+$gray: hsl(0, 0%, 59%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+.dataContainer {
+  width: 100%;
+  height: 40vh;
+  background-image: url("https://res.cloudinary.com/dwdz4mn27/image/upload/v1645993309/ip-address-tracker-master/images/pattern-bg_cd1edr.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 500;
+  }
+
+  .inputContainer {
+    display: flex;
+
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+
+    input {
+      height: 50px;
+      width: 250px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border: none;
+      font-family: "Rubik", sans-serif;
+      font-size: 1.7rem;
+      padding-left: 25px;
+      outline: none;
+    }
+
+    figure {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: black;
+      cursor: pointer;
+      img {
+        height: 12px;
+        width: 12px;
+      }
+    }
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: absolute;
+    top: 80%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: $gray;
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+        color: black;
+      }
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  height: 85vh;
+}
