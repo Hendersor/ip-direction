@@ -80,7 +80,7 @@ function createMap(lat, lng) {
       "https://res.cloudinary.com/dwdz4mn27/image/upload/v1645993313/ip-address-tracker-master/images/icon-location_mfqr7j.svg",
 
     iconSize: [36, 46], // size of the icon
-    iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+    iconAnchor: [18, 46], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62], // the same for the shadow
     popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
   });
