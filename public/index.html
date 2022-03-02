@@ -38,7 +38,7 @@
               pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"
               id="ipAddress"
             />
-            <figure>
+            <figure id="searchContainer">
               <img
                 src="https://res.cloudinary.com/dwdz4mn27/image/upload/v1645993311/ip-address-tracker-master/images/icon-arrow_w3vais.svg"
                 alt="arrow icon"
@@ -47,10 +47,12 @@
           </div>
 
           <div class="information">
-            <p>IP ADDRESS <span>192.212.174.101</span></p>
-            <p>LOCATION <span>Brooklyn, NY 10001</span></p>
-            <p>TIMEZONE <span>UTC -05:00</span></p>
-            <p>ISP <span>SpaceX Starlink</span></p>
+            <p>IP ADDRESS <span id="ipContainer">192.212.174.101</span></p>
+            <p>
+              LOCATION <span id="locationContainer">Brooklyn, NY 10001</span>
+            </p>
+            <p>TIMEZONE <span id="timezoneContainer">UTC -05:00</span></p>
+            <p>ISP <span id="ispContainer">SpaceX Starlink</span></p>
           </div>
         </div>
       </section>
