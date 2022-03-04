@@ -11,22 +11,17 @@ const ispContainer = document.getElementById("ispContainer");
 
 const apiKey = "at_QKcZXGcamwITKpsS6OITiM3Wbd81s";
 const apiUrl = "https://geo.ipify.org/api/v2/country,city?";
-let ipValue;
-let ipInfo, locationRegion, locationCountry, timeZone, isp;
-
+let ipValue = "";
+let map;
 inputIp.addEventListener("input", getIp);
-
 function getIp() {
   ipValue = inputIp.value;
 }
 
 searchButton.addEventListener("click", getDirection);
 function getDirection() {
-  var container = L.DomUtil.get("map");
-  if (container != null) {
-    container._leaflet_id = null;
-    getData();
-  }
+  map.remove();
+  getData();
 }
 
 const getData = async () => {
@@ -35,32 +30,33 @@ const getData = async () => {
       `${apiUrl}apiKey=${apiKey}&ipAddress=${ipValue}`
     );
     const data = await response.json();
-    console.log(data);
-
-    ipInfo = data.ip;
-    locationRegion = data.location.city;
-    locationCountry = data.location.country;
-    timeZone = data.location.timezone;
-    isp = data.isp;
-    let lat = data.location.lat;
-    let lng = data.location.lng;
-
-    createMap(lat, lng);
-    putData();
+    createMap(data);
+    putData(data);
   } catch (error) {
     console.error(error);
   }
 };
 
-const putData = () => {
+const putData = (data) => {
+  let ipInfo = data.ip;
+  let locationRegion = data.location.city;
+  let locationCountry = data.location.country;
+  let timeZone = data.location.timezone;
+  let isp = data.isp;
+
   ipAddressContainer.innerText = ipInfo;
   locationContainer.innerText = `${locationRegion}, ${locationCountry}`;
   timezoneContainer.innerText = timeZone;
   ispContainer.innerText = isp;
 };
 
-function createMap(lat, lng) {
-  let map = L.map("map").setView([lat, lng], 13);
+getData();
+
+function createMap(data) {
+  let lat = data.location.lat;
+  let lng = data.location.lng;
+
+  map = L.map("map").setView([lat, lng], 13);
   L.tileLayer(
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
     {
@@ -86,5 +82,3 @@ function createMap(lat, lng) {
   });
   L.marker([lat, lng], { icon: greenIcon }).addTo(map);
 }
-
-getData();
