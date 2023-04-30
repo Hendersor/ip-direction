@@ -1,4 +1,30 @@
 # Ip geolocation
+### English
+### What it is and how it was built?
+It's an app based on HTML, SASS, and Javascript. It has a connection to an external API called IP Geolocation API. It obtains your IP and marks on the map where it comes from, plus it shows data such as IP, location, ISP, and timezone. For security reasons, it won't mark your exact location but only where the ISP is sending the request from. The design in Figma was provided by frontend mentor, and I was in charge of implementing the design with HTML, CSS, and functional Javascript. I used Webpack as the module bundler.
+
+- Semantic HTML 5
+- Flexbox
+- Responsive Design, mobile-first
+- DevTools
+- Asynchronous programming with async-await and fetch.
+- Webpack
+
+
+### What did I learn and what challenges did I face?
+There were several challenges, including dealing with async functions, connecting to the API, using Leaflet to display the map, and configuring the webpack.config.js file for the first time. There were also a couple of bugs with the location icon when zooming in or out on the map. However, I was able to solve all of these issues and complete the project as intended. The most interesting challenge was understanding the webpack configuration line by line.
+
+### The project allowed me to
+- Becoming familiar with Webpack and its configuration.
+- Understanding how to make a connection to an API.
+- Working with API data and displaying it to the user.
+- Starting to get familiar with external JS libraries such as Leafle
+
+![Comments crud image](https://res.cloudinary.com/dwdz4mn27/image/upload/v1656798779/ssProjects/ip_bicffc.png)
+
+
+
+### Español
 ### ¿Qué es y como esta construido?
 Es una app basada en HTML, SASS y Javascript. Con una conexion a una API externa llamda IP Geolocation API.
 Obtiene de base tu Ip y en el mapa marca de donde viene, mas aparte muestra los datos como al IP, ubicacion, el ISP y la zona horaria.
